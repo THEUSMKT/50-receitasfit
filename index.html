@@ -99,6 +99,8 @@
   .preview-card{background:var(--verde-suave);border:1px solid var(--borda);border-radius:20px;padding:14px;box-shadow:0 12px 28px rgba(31,110,63,.08)}
   .preview-page{background:#fff;border-radius:13px;overflow:hidden;border:1px solid #e8eee9;padding:18px;min-height:500px}
   .preview-sheet{height:100%;display:flex;flex-direction:column;gap:14px;color:#2c3b31}
+  .preview-image{position:relative;aspect-ratio:16/10;border-radius:11px;overflow:hidden;background:var(--verde-claro);box-shadow:0 5px 14px rgba(31,110,63,.12)}
+  .preview-image img{width:100%;height:100%;object-fit:cover}
   .preview-sheet h3{font-family:Georgia,'Times New Roman',serif;font-size:1.12rem;line-height:1.2;color:#2f4537;margin:0}
   .preview-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e9ecea;border-radius:8px;overflow:hidden}
   .preview-metric{background:#f5f6f5;padding:9px 6px;text-align:center}
@@ -274,6 +276,9 @@
       <figure class="preview-card">
         <div class="preview-page">
           <div class="preview-sheet">
+            <div class="preview-image">
+              <img src="assets/preview-panqueca.webp" alt="Panquecas de aveia e banana servidas com banana e canela" loading="lazy" decoding="async" width="500" height="707">
+            </div>
             <span class="preview-real-tag">Trecho real · pág. 4</span>
             <h3>Panqueca de Aveia e Banana</h3>
             <div class="preview-metrics">
@@ -310,6 +315,9 @@
       <figure class="preview-card">
         <div class="preview-page">
           <div class="preview-sheet">
+            <div class="preview-image">
+              <img src="assets/preview-frango.webp" alt="Frango grelhado servido com batata doce e brócolis" loading="lazy" decoding="async" width="500" height="707">
+            </div>
             <span class="preview-real-tag">Trecho real · pág. 16</span>
             <h3>Frango Grelhado com Batata Doce e Brócolis</h3>
             <div class="preview-metrics">
@@ -345,6 +353,9 @@
       <figure class="preview-card">
         <div class="preview-page">
           <div class="preview-sheet">
+            <div class="preview-image">
+              <img src="assets/preview-bolo-caneca.webp" alt="Bolo de caneca fit de chocolate" loading="lazy" decoding="async" width="500" height="707">
+            </div>
             <span class="preview-real-tag">Trecho real · pág. 45</span>
             <h3>Bolo de Caneca Fit de Chocolate</h3>
             <div class="preview-metrics">
