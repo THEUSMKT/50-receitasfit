@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- deploy-version: previews-html-reais-fix-2026-09-21 -->
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -96,8 +97,17 @@
   .previews-kicker{display:block;text-align:center;color:var(--verde-esc);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
   .preview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
   .preview-card{background:var(--verde-suave);border:1px solid var(--borda);border-radius:20px;padding:14px;box-shadow:0 12px 28px rgba(31,110,63,.08)}
-  .preview-page{background:#fff;border-radius:13px;overflow:hidden;border:1px solid #e8eee9}
-  .preview-page img{width:100%;height:auto;display:block;loading:lazy}
+  .preview-page{background:#fff;border-radius:13px;overflow:hidden;border:1px solid #e8eee9;padding:18px;min-height:500px}
+  .preview-sheet{height:100%;display:flex;flex-direction:column;gap:14px;color:#2c3b31}
+  .preview-sheet h3{font-family:Georgia,'Times New Roman',serif;font-size:1.12rem;line-height:1.2;color:#2f4537;margin:0}
+  .preview-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#e9ecea;border-radius:8px;overflow:hidden}
+  .preview-metric{background:#f5f6f5;padding:9px 6px;text-align:center}
+  .preview-metric b{display:block;font-size:.66rem;letter-spacing:.02em;color:var(--verde-esc);text-transform:uppercase}
+  .preview-metric span{display:block;font-size:.72rem;color:#4f5f55;line-height:1.25;margin-top:2px}
+  .preview-block h4{font-family:Georgia,'Times New Roman',serif;color:#d9902d;font-size:.92rem;margin-bottom:6px}
+  .preview-block ul,.preview-block ol{padding-left:18px;color:#26352c;font-family:Georgia,'Times New Roman',serif;font-size:.78rem;line-height:1.45}
+  .preview-block li+li{margin-top:2px}
+  .preview-real-tag{align-self:flex-start;font-size:.7rem;font-weight:700;color:var(--verde-esc);background:var(--verde-claro);border:1px solid var(--borda);border-radius:999px;padding:4px 9px}
   .preview-card figcaption{padding:14px 6px 4px}
   .preview-card figcaption b{display:block;color:var(--verde-esc);font-size:1rem;line-height:1.35;margin-bottom:4px}
   .preview-card figcaption span{display:block;color:var(--cinza);font-size:.88rem}
@@ -258,12 +268,38 @@
   <div class="wrap">
     <span class="previews-kicker">Por dentro do e-book</span>
     <h2>Veja como as receitas são apresentadas</h2>
-    <p class="sub-sec">Cada receita traz foto, tempo de preparo, porções, calorias, ingredientes e modo de preparo completo.</p>
+    <p class="sub-sec">Trechos reais do material: cada receita mostra tempo de preparo, porções, calorias, ingredientes e modo de preparo.</p>
 
     <div class="preview-grid">
       <figure class="preview-card">
         <div class="preview-page">
-          <img src="assets/preview-panqueca.webp" alt="Página real do e-book com a receita Panqueca de Aveia e Banana" loading="lazy" decoding="async">
+          <div class="preview-sheet">
+            <span class="preview-real-tag">Trecho real · pág. 4</span>
+            <h3>Panqueca de Aveia e Banana</h3>
+            <div class="preview-metrics">
+              <div class="preview-metric"><b>Tempo</b><span>10 min</span></div>
+              <div class="preview-metric"><b>Porções</b><span>1 pessoa<br>(2 panquecas)</span></div>
+              <div class="preview-metric"><b>Calorias</b><span>~250 kcal</span></div>
+            </div>
+            <div class="preview-block">
+              <h4>Ingredientes</h4>
+              <ul>
+                <li>1 banana madura</li>
+                <li>2 ovos</li>
+                <li>3 col. sopa de aveia em flocos</li>
+                <li>1 pitada de canela</li>
+                <li>1 fio de óleo de coco</li>
+              </ul>
+            </div>
+            <div class="preview-block">
+              <h4>Modo de Preparo</h4>
+              <ol>
+                <li>Amasse a banana com um garfo até virar um purê.</li>
+                <li>Misture os ovos, a aveia e a canela até formar uma massa homogênea.</li>
+                <li>Despeje porções da massa e doure cerca de 2 minutos de cada lado.</li>
+              </ol>
+            </div>
+          </div>
         </div>
         <figcaption>
           <b>Panqueca de Aveia e Banana</b>
@@ -273,7 +309,32 @@
 
       <figure class="preview-card">
         <div class="preview-page">
-          <img src="assets/preview-frango.webp" alt="Página real do e-book com a receita Frango Grelhado com Batata Doce e Brócolis" loading="lazy" decoding="async">
+          <div class="preview-sheet">
+            <span class="preview-real-tag">Trecho real · pág. 16</span>
+            <h3>Frango Grelhado com Batata Doce e Brócolis</h3>
+            <div class="preview-metrics">
+              <div class="preview-metric"><b>Tempo</b><span>25 min</span></div>
+              <div class="preview-metric"><b>Porções</b><span>2 pessoas</span></div>
+              <div class="preview-metric"><b>Calorias</b><span>~380 kcal<br>por porção</span></div>
+            </div>
+            <div class="preview-block">
+              <h4>Ingredientes</h4>
+              <ul>
+                <li>2 filés de peito de frango</li>
+                <li>1 batata doce média</li>
+                <li>1 xícara de brócolis</li>
+                <li>Alho, sal e azeite a gosto</li>
+              </ul>
+            </div>
+            <div class="preview-block">
+              <h4>Modo de Preparo</h4>
+              <ol>
+                <li>Corte a batata doce em cubos e leve ao forno a 200°C por 20 minutos.</li>
+                <li>Tempere o frango e grelhe por 5–6 minutos de cada lado.</li>
+                <li>Cozinhe o brócolis no vapor por 4 minutos.</li>
+              </ol>
+            </div>
+          </div>
         </div>
         <figcaption>
           <b>Frango Grelhado com Batata Doce e Brócolis</b>
@@ -283,7 +344,32 @@
 
       <figure class="preview-card">
         <div class="preview-page">
-          <img src="assets/preview-bolo-caneca.webp" alt="Página real do e-book com a receita Bolo de Caneca Fit de Chocolate" loading="lazy" decoding="async">
+          <div class="preview-sheet">
+            <span class="preview-real-tag">Trecho real · pág. 45</span>
+            <h3>Bolo de Caneca Fit de Chocolate</h3>
+            <div class="preview-metrics">
+              <div class="preview-metric"><b>Tempo</b><span>5 min</span></div>
+              <div class="preview-metric"><b>Porções</b><span>1 pessoa</span></div>
+              <div class="preview-metric"><b>Calorias</b><span>~220 kcal</span></div>
+            </div>
+            <div class="preview-block">
+              <h4>Ingredientes</h4>
+              <ul>
+                <li>1 ovo</li>
+                <li>2 col. sopa de aveia</li>
+                <li>1 col. sopa de cacau em pó</li>
+                <li>1 col. chá de mel</li>
+              </ul>
+            </div>
+            <div class="preview-block">
+              <h4>Modo de Preparo</h4>
+              <ol>
+                <li>Misture todos os ingredientes diretamente em uma caneca.</li>
+                <li>Leve ao microondas por 1 minuto e 30 segundos.</li>
+                <li>Deixe descansar um minuto antes de comer.</li>
+              </ol>
+            </div>
+          </div>
         </div>
         <figcaption>
           <b>Bolo de Caneca Fit de Chocolate</b>
@@ -292,7 +378,7 @@
       </figure>
     </div>
 
-    <p class="preview-note">Previews reais de páginas internas do produto.</p>
+    <p class="preview-note">Conteúdo real do produto, reorganizado aqui apenas para uma leitura mais nítida na landing page.</p>
   </div>
 </section>
 
