@@ -5,6 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>50 Receitas Fit Rápidas e Fáceis</title>
 <meta name="description" content="50 receitas fitness práticas e deliciosas, prontas em até 20 minutos. De R$27,90 por apenas R$8,90.">
+<!-- Meta Pixel Code — Pixel Beck Performance -->
+<script>
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;
+    n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+    t=b.createElement(e);t.async=!0;t.src=v;
+    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+  }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '2521450064945419');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {
+    content_name: '50 Receitas Fit Rápidas e Fáceis',
+    content_type: 'product',
+    value: 8.90,
+    currency: 'BRL'
+  });
+</script>
+<!-- End Meta Pixel Code -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   /* ===== EDITE AQUI ===== */
@@ -169,6 +190,7 @@
 </style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2521450064945419&ev=PageView&noscript=1"></noscript>
 
 <svg width="0" height="0" style="position:absolute">
   <symbol id="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
@@ -322,10 +344,36 @@
   document.querySelectorAll(".js-checkout").forEach(a => a.href = LINK_CHECKOUT);
   document.querySelectorAll(".js-zap").forEach(a => a.href = LINK_WHATSAPP);
 
+  /* ===== META PIXEL: eventos de conversão =====
+     Não enviamos nome, telefone, e-mail ou qualquer dado pessoal.
+     Purchase NÃO é disparado nesta página; deve vir da compra aprovada no checkout. */
+  document.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target || typeof fbq !== "function") return;
+
+    const checkout = target.closest(".js-checkout");
+    if (checkout) {
+      fbq("track", "InitiateCheckout", {
+        content_name: "50 Receitas Fit Rápidas e Fáceis",
+        content_type: "product",
+        value: 8.90,
+        currency: "BRL"
+      });
+      return;
+    }
+
+    const whatsapp = target.closest(".js-zap");
+    if (whatsapp) {
+      fbq("track", "Contact", {
+        content_name: "Dúvida sobre o e-book 50 Receitas Fit"
+      });
+    }
+  }, true);
+
   const itens = ["Pagamento único, acesso vitalício","Acesso imediato ao e-book completo em PDF","Satisfação garantida ou seu dinheiro de volta"];
   document.querySelectorAll(".js-garantias").forEach(ul => {
     ul.innerHTML = itens.map(t => `<li><svg><use href="#check"/></svg>${t}</li>`).join("") +
-      `<li><svg><use href="#zap"/></svg>Dúvidas? <a class="btn-zap" href="${LINK_WHATSAPP}" target="_blank" rel="noopener">Fale no WhatsApp</a></li>`;
+      `<li><svg><use href="#zap"/></svg>Dúvidas? <a class="btn-zap js-zap" href="${LINK_WHATSAPP}" target="_blank" rel="noopener">Fale no WhatsApp</a></li>`;
   });
 
   const burger = document.querySelector(".burger"), menu = document.querySelector(".menu");
